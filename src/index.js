@@ -31,12 +31,12 @@ const App = () => {
 
 	return (
 		<div>
-			<Navbar bg='dark' variant='dark' fixed='top'>
+			<Navbar bg='dark' variant='dark' sticky='top'>
 				<Navbar.Brand href="#home">José Lastra</Navbar.Brand>
 			</Navbar>
 			<Container className='h-100'>
 				<Row className='text-center h-100 d-flex align-items-center'>
-					<Col className=''>
+					<Col>
 						<h1>Give Feedback</h1>
 						<Button onClick={handleClick('Bad')} variant='dark' className='mx-2'>Bad</Button>
 						<Button onClick={handleClick('Neutral')} variant='secondary' className='mx-2'>Neutral</Button>
