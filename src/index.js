@@ -1,43 +1,12 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
-
-const Button = props => (
-	<button onClick={props.handleClick}>{props.text}</button>
-)
-
-const Statistic = ({text, value, percentage}) => {
-	return (
-		<tr>
-			<td>{text}</td>
-			<td>{value} {percentage ? '%':''}</td>
-		</tr>
-	)
-}
-
-const Statistics = ({bad,neutral,good}) => {
-	const total = bad + neutral + good
-	const avg = (good + (bad * -1)) / total
-	const positivity = good / total * 100
-
-	if (total === 0) {
-		return <div><p>No Feedback given</p></div>
-	} 
-	return (
-		<div>
-			<h2>statistics</h2>
-			<table>
-				<tbody>
-					<Statistic text='Bad' value={bad} />
-					<Statistic text='Neutral' value={neutral} />
-					<Statistic text='Good' value={good} />
-					<Statistic text='Total' value={total} />
-					<Statistic text='Average' value={avg.toFixed(2)} />
-					<Statistic text='Positivity' value={positivity.toFixed(2)}  percentage={true}/>
-				</tbody>
-			</table>
-		</div>
-	)
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Statistics from './components/Statistics'
 
 const App = () => {
 	const [good, setGood] = useState(0)
@@ -62,11 +31,20 @@ const App = () => {
 
 	return (
 		<div>
-			<h1>Give Feedback</h1>
-			<Button handleClick={handleClick('Bad')} text='Bad' />
-			<Button handleClick={handleClick('Neutral')} text='Neutral' />
-			<Button handleClick={handleClick('Good')} text='Good' />
-			<Statistics bad={bad} neutral={neutral} good={good}/>
+			<Navbar bg='dark' variant='dark' fixed='top'>
+				<Navbar.Brand href="#home">José Lastra</Navbar.Brand>
+			</Navbar>
+			<Container className='h-100'>
+				<Row className='text-center h-100 d-flex align-items-center'>
+					<Col className=''>
+						<h1>Give Feedback</h1>
+						<Button onClick={handleClick('Bad')} variant='dark' className='mx-2'>Bad</Button>
+						<Button onClick={handleClick('Neutral')} variant='secondary' className='mx-2'>Neutral</Button>
+						<Button onClick={handleClick('Good')} variant='primary' className='mx-2'>Good</Button>
+						<Statistics bad={bad} neutral={neutral} good={good}/>
+					</Col>
+				</Row>
+			</Container>
 		</div>
 	)
 }
