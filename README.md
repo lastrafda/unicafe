@@ -11,12 +11,12 @@ También, separé los componentes en archivos diferentes.
 
 ## Levantar el proyecto
 
-En el directorio del proyecto,  ejecute:
+En el directorio del proyecto,  ejecuta los siguientes comandos:
 ### `npm install`  
 ### `npm start`
 
-Ejecuta la aplicación en modo desarrollador.<br />
+Esto ejecutará la aplicación en modo desarrollador.<br />
 Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador.
 
-La página se recargara si haces cambios.<br />
+La página se recargará si haces cambios.<br />
 
