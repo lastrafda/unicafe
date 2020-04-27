@@ -9,6 +9,9 @@ Decidí agregarle [https://react-bootstrap.github.io/](Bootstrap React) porque e
 También, separé los componentes en archivos diferentes.  
 *Por conveniencia, en el curso sugerían utilizar solo index.js, yo decidí seguir la recomendación*  
 
+
+## Live Demo
+[https://xenodochial-tesla-f50a82.netlify.app/](Give Feedback App)
 ## Levantar el proyecto
 
 En el directorio del proyecto,  ejecuta los siguientes comandos:
