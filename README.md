@@ -11,7 +11,7 @@ También, separé los componentes en archivos diferentes.
 
 
 ## Live Demo
-[https://xenodochial-tesla-f50a82.netlify.app/] (https://xenodochial-tesla-f50a82.netlify.app/)
+[https://xenodochial-tesla-f50a82.netlify.app/](https://xenodochial-tesla-f50a82.netlify.app/)
 ## Levantar el proyecto
 
 En el directorio del proyecto,  ejecuta los siguientes comandos:
